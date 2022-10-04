@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <title>Document</title>
 </head>
 
@@ -16,11 +17,11 @@
         <div class="header__list-block">
           <div class="header__logo"><a href="#"><img src="img/logo.svg" alt="Logo"></a></div>
           <ul class="header__list">
-            <li class="header__list-point"><a href="#">Home</a></li>
-            <li class="header__list-point"><a href="#">Blog</a></li>
-            <li class="header__list-point"><a href="#">Features</a></li>
-            <li class="header__list-point"><a href="#">Pricing</a></li>
-            <li class="header__list-point"><a href="#">Documentation</a></li>
+            <li class="header__list-point"><a href="#Home">Home</a></li>
+            <li class="header__list-point"><a href="#Blog">Blog</a></li>
+            <li class="header__list-point"><a href="#Features">Features</a></li>
+            <li class="header__list-point"><a href="#Pricing">Pricing</a></li>
+            <li class="header__list-point"><a href="#Documentation">Documentation</a></li>
           </ul>
         </div>
         <div class="header__social">
@@ -34,7 +35,7 @@
     </div>
   </header>
   <section>
-    <div class="intro">
+    <div class="intro" id="Home">
       <div class="container">
         <div class="intro__wrapper">
           <h3 class="intro__suptittle sup">Plan your life</h3>
@@ -43,8 +44,8 @@
             laudem
             an, insolens gubergren similique est cu. Et vel modus congue vituperata.</h2>
           <img class="intro__play" src="img/intro-butt.svg" alt="Play_Button">
+        </div>
       </div>
-    </div>
     </div>
   </section>
   <section>
@@ -111,7 +112,7 @@
     </div>
   </section>
   <section>
-    <div class="features">
+    <div class="features" id="Features">
       <div class="container">
         <div class="features__wrapper">
           <div class="features__top">
@@ -174,27 +175,77 @@
     </div>
   </section>
   <section>
-    <div class="blog">
+    <div class="blog" id="Blog">
       <div class="container">
-        <div class="blog__wrapper">
-          <p class="blog__suptittle sup">Our resources</p>
-          <h2 class="blog__tittle">Start reading our blog</h2>
-          <div class="blog__body">
-            <div class="blog__img">
-              <img src="../img/blog.png" alt="">
-            </div>
-            <div class="blog__text">
-              <h2 class="blog__text-tittle">How to start planning</h2>
-              <p class="blog__text-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit
-                tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota
-                everti periculis vis ei, quas tibique pro at, eos ut decore ...
-              </p>
-              <div class="blog__text-buttons">
-                <button class="blog__text-button1">Read now</button>
-                <button class="blog__text-button2">Add to your bookmarks</button>
+        <div class="blog-slider-wrapper">
+          <div class="blog__wrapper">
+
+            <p class="blog__suptittle sup">Our resources</p>
+            <h2 class="blog__tittle">Start reading our blog</h2>
+
+            <div class="blog-swiper">
+              <div class="blog-slider__wrapper swiper-wrapper">
+
+                <div class="blog__body swiper-slide">
+                  <div class="blog__img">
+                    <img src="../img/blog.png" alt="">
+                  </div>
+                  <div class="blog__text">
+                    <h2 class="blog__text-tittle">How to start planning</h2>
+                    <p class="blog__text-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                      vidit
+                      tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota
+                      everti periculis vis ei, quas tibique pro at, eos ut decore ...
+                    </p>
+                    <div class="blog__text-buttons">
+                      <button class="blog__text-button1">Read now</button>
+                      <button class="blog__text-button2">Add to your bookmarks</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog__body swiper-slide">
+                  <div class="blog__img">
+                    <img src="../img/blog.png" alt="">
+                  </div>
+                  <div class="blog__text">
+                    <h2 class="blog__text-tittle">How to start planning</h2>
+                    <p class="blog__text-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                      vidit
+                      tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota
+                      everti periculis vis ei, quas tibique pro at, eos ut decore ...
+                    </p>
+                    <div class="blog__text-buttons">
+                      <button class="blog__text-button1">Read now</button>
+                      <button class="blog__text-button2">Add to your bookmarks</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog__body swiper-slide">
+                  <div class="blog__img">
+                    <img src="../img/blog.png" alt="">
+                  </div>
+                  <div class="blog__text">
+                    <h2 class="blog__text-tittle">How to start planning</h2>
+                    <p class="blog__text-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                      vidit
+                      tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota
+                      everti periculis vis ei, quas tibique pro at, eos ut decore ...
+                    </p>
+                    <div class="blog__text-buttons">
+                      <button class="blog__text-button1">Read now</button>
+                      <button class="blog__text-button2">Add to your bookmarks</button>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
+          <div class="blog-swiper-button-prev"></div>
+          <div class="blog-swiper-button-next"></div>
         </div>
       </div>
     </div>
@@ -209,21 +260,133 @@
             <p class="quotes__body-text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui
               laudem an.</p>
           </div>
-          <div class="quotes__slider">
 
-            <div class="quotes__slider-column">
-              <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit
-                tractatos, vero tractatos ius an, in mel diceret persecuti.
-              </p>
-              <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+
+          <div class="quotes__slider-block swiper">
+            <div class=" swiper-wrapper">
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-slide">
+                  <div class="quotes__slider-column">
+                    <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                      usu
+                      vidit
+                      tractatos, vero tractatos ius an, in mel diceret persecuti.
+                    </p>
+                    <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes__slider swiper-slide">
+                <div class="quotes__slider-wrapper">
+
+                  <div class="quotes__slider-slide">
+                    <div class="quotes__slider-column">
+                      <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
+                        usu
+                        vidit
+                        tractatos, vero tractatos ius an, in mel diceret persecuti.
+                      </p>
+                      <img class="quotes__slider-icon" src="img/quotes.png" alt="photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
-
-            <div class="quotes__slider-column">
-              <p class="quotes__slider-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit
-                tractatos, vero tractatos ius an, in mel diceret persecuti.
-              </p>
+            <div class="quotes-buttons-pagination">
+              <div class="quotes-slider-pagination"></div>
             </div>
-
           </div>
         </div>
 
@@ -231,44 +394,106 @@
     </div>
   </section>
   <section>
-    <div class="faq">
+    <div class="faq" id="Pricing">
       <div class="container">
         <div class="faq__wrapper">
           <div class="faq__top">
             <h3 class="faq__suptittle">CUSTOMER HELP</h3>
             <h2 class="faq__tittle">Frequently asked questions</h2>
           </div>
-          <div class="faq__questions">
+          <div class="faq__accordion">
 
-            <div class="faq__block">
-              <img class="faq__icon" src="img/faq.svg" alt="">
-              <p class="faq__text">Reque insolens in vel?</p>
-            </div>
+            <ul class="accordion__list">
+              <li class="accordion">
+                <button class="accordion__control">
+                  <span class="accordion__tittle">Reque insolens in vel?</span>
+                </button>
+                <div class="accordion__content">
+
+                  <p class="faq__block-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                    vidit
+                    tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="faq__block-button">Go to documentation</button>
+
+                </div>
+              <li>
+            </ul>
             <img class="faq__line" src="img/faq_line.svg" alt="">
 
-            <div class="faq__block">
-              <img class="faq__icon" src="img/faq.svg" alt="">
-              <p class="faq__text">Vis rebum error graecis ea, id sit postea accusamus?</p>
-            </div>
+            <ul class="accordion__list">
+              <li class="accordion">
+                <button class="accordion__control">
+                  <span class="accordion__tittle">Vis rebum error graecis ea, id sit postea accusamus?</span>
+                </button>
+                <div class="accordion__content">
+
+                  <p class="faq__block-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                    vidit
+                    tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="faq__block-button">Go to documentation</button>
+
+                </div>
+              <li>
+            </ul>
             <img class="faq__line" src="img/faq_line.svg" alt="">
 
-            <div class="faq__block">
-              <img class="faq__icon" src="img/faq.svg" alt="">
-              <p class="faq__text">Lorem repudiandae ne nec?</p>
-            </div>
+            <ul class="accordion__list">
+              <li class="accordion">
+                <button class="accordion__control">
+                  <span class="accordion__tittle">Lorem repudiandae ne nec?</span>
+                </button>
+                <div class="accordion__content">
+
+                  <p class="faq__block-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                    vidit
+                    tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="faq__block-button">Go to documentation</button>
+
+                </div>
+              <li>
+            </ul>
             <img class="faq__line" src="img/faq_line.svg" alt="">
 
-            <div class="faq__block">
-              <img class="faq__icon" src="img/faq.svg" alt="">
-              <p class="faq__text">Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
-            </div>
+            <ul class="accordion__list">
+              <li class="accordion">
+                <button class="accordion__control">
+                  <span class="accordion__tittle">Ad dicit numquam vel. Et eos iudico feugait percipitur?</span>
+                </button>
+                <div class="accordion__content">
+
+                  <p class="faq__block-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                    vidit
+                    tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="faq__block-button">Go to documentation</button>
+
+                </div>
+              <li>
+            </ul>
             <img class="faq__line" src="img/faq_line.svg" alt="">
 
-            <div class="faq__block">
-              <img class="faq__icon" src="img/faq.svg" alt="">
-              <p class="faq__text">Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
-            </div>
+            <ul class="accordion__list">
+              <li class="accordion">
+                <button class="accordion__control">
+                  <span class="accordion__tittle">Sea no dico percipitur. Fierent constituam definitiones id eum?</span>
+                </button>
+                <div class="accordion__content">
+
+                  <p class="faq__block-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu
+                    vidit
+                    tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="faq__block-button">Go to documentation</button>
+
+                </div>
+              <li>
+            </ul>
             <img class="faq__line" src="img/faq_line.svg" alt="">
+
+
 
           </div>
         </div>
@@ -276,7 +501,7 @@
     </div>
   </section>
   <section>
-    <div class="start">
+    <div class="start" id="Documentation">
       <div class="container">
         <div class="start__wrapper">
           <h3 class="start__suptittle">Plan your Life</h3>
@@ -333,6 +558,8 @@
       <p class="footer__copyright">Copyright © 2018 by Random site</p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="/js/app.min.js"></script>
 </body>
 
 </html>
