@@ -893,7 +893,8 @@ svg path {
 
 .right__container--quotes {
   margin-left: auto;
-  max-width: 1130px;
+  max-width: 1100px;
+  padding: 0px 15px;
 }
 
 .quotes {
@@ -1384,20 +1385,38 @@ input::placeholder {
     padding-left: 40px;
   }
   .blog__img {
-    padding-top: 60px;
-    margin-left: -30px;
+    margin: 0;
+    text-align: center;
   }
   .blog__text-buttons {
     padding-bottom: 100px;
   }
+  .blog__text-button2 {
+    margin-top: 20px;
+  }
+  .blog__text-tittle {
+    text-align: center;
+    padding-top: 0;
+  }
   .blog__text {
-    max-width: 260px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .blog__body {
+    display: block;
+  }
+  .blog__wrapper {
+    max-width: 590px;
   }
   .quotes__slider-column {
     max-width: 500px;
   }
   .quotes__slider-text {
-    padding: 40px 20px 0px 20px;
+    padding: 40px 20px 40px 30px;
+  }
+  .quotes-buttons-pagination {
+    top: 82%;
+    left: 40%;
   }
   .news__wrapper {
     padding: 118px 50px 122px;
@@ -1461,6 +1480,11 @@ input::placeholder {
   .quotes__wrapper {
     display: block;
   }
+  .quotes__body {
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
   .quotes__body-suptittle {
     padding-top: 40px;
   }
@@ -1472,6 +1496,10 @@ input::placeholder {
   }
   .quotes__slider-text {
     padding: 25px 25px 50px;
+  }
+  .quotes-buttons-pagination {
+    top: 92%;
+    left: 37%;
   }
   .faq__suptittle {
     padding-top: 60px;

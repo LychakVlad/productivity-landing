@@ -5,9 +5,11 @@ flsFunctions.isWebp();
 new Swiper('.blog-swiper', {
     loop: true,
     speed: 700,
-    autoplay: {
+    slidesPerView: 1,
+    centeredSlides: true,
+    /**autoplay: {
         delay: 4000,
-    },
+    }, **/
     navigation: {
         nextEl: '.blog-swiper-button-next',
         prevEl: '.blog-swiper-button-prev',
@@ -24,14 +26,30 @@ new Swiper('.quotes__slider-block', {
     grabCursor: true,
     loop: true,
     watchSlideVisibility: true,
-    autoplay: {
+    /** autoplay: {
         delay: 2000,
-    },
+    }, **/
     speed: 700,
     pagination: {
         el: '.quotes-slider-pagination',
         clickable: true,
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            pagination: {
+                el: '',
+            }
+        },
+        991: {
+            pagination: {
+                el: '.quotes-slider-pagination',
+                clickable: true,
+            },
+            slidesPerView: 1.5
+        },
+
+    }
 }
 );
 
