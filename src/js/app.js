@@ -36,44 +36,46 @@ new Swiper('.quotes__slider-block', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1,
-            pagination: {
-                el: '',
-            }
+            slidesPerView: 1
         },
         991: {
-            pagination: {
-                el: '.quotes-slider-pagination',
-                clickable: true,
-            },
             slidesPerView: 1.5
         },
-
     }
 }
 );
 
-document.addEventListener('DOMContentLoaded', () => {
-    const acc = document.querySelectorAll('.accordion');
+const accordions = document.querySelectorAll('.accordion');
+const accordionButtons = document.querySelectorAll(".accordion__tittle")
+const accordionDataboxes = document.querySelectorAll(".accordion__content");
 
-    acc.forEach(el => {
-        el.addEventListener('click', (e) => {
-            const self = e.currentTarget;
-            const control = self.querySelector('.accordion__tittle');
-            const content = self.querySelector('.accordion__content');
+accordions.forEach(n => {
+    const currentButton = n.querySelector(".accordion__tittle");
+    const currentDatabox = n.querySelector(".accordion__content");
 
-            content.classList.toggle('open');
-            control.classList.toggle('open');
-
-            if (content.classList.contains('open')) {
-
-                content.style.maxHeight = content.scrollHeight + 'px';
-
-            } else {
-                content.style.maxHeight = null;
-            };
+    const toggleActiveElements = () => {
+        accordionButtons.forEach(v => {
+            if (v !== currentButton) {
+                v.classList.remove("open");
+            }
         });
-    });
+
+        accordionDataboxes.forEach(v => {
+            if (v !== currentDatabox) {
+                v.classList.remove("open");
+                v.style.setProperty("--height", "0px");
+            }
+        });
+
+        currentButton.classList.toggle("open");
+        currentDatabox.classList.toggle("open");
+
+        currentDatabox.classList.contains("open")
+            ? currentDatabox.style.setProperty("--height", `${currentDatabox.scrollHeight}px`)
+            : currentDatabox.style.setProperty("--height", "0px");
+    };
+
+    currentButton.addEventListener("click", toggleActiveElements);
 });
 
 
@@ -89,5 +91,20 @@ for (let anchor of anchors) {
         })
     })
 }
+
+const iconMenu = document.querySelector('.header__burger-icon');
+const menuBody = document.querySelector('.header__burger-menu');
+iconMenu.addEventListener('click', function (e) {
+    document.body.classList.toggle('_lock')
+    iconMenu.classList.toggle('_active');
+    menuBody.classList.toggle('_active');
+})
+
+if (iconMenu.classList.contains('_active')) {
+    document.body.classList.remove('_lock')
+    iconMenu.classList.remove('._active');
+    menuBody.classList.remove('._active');
+}
+
 
 

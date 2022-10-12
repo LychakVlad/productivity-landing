@@ -297,7 +297,11 @@ svg path {
   padding: 0px 15px;
 }
 
-.header__nav {
+body._lock {
+  overflow: hidden;
+}
+
+.header__burger-menu {
   display: flex;
   padding-top: 12px;
   align-items: center;
@@ -978,6 +982,7 @@ svg path {
   letter-spacing: 0.03em;
   color: #676F95;
   padding: 41px 71px 53px 69px;
+  position: relative;
 }
 
 .swiper-slide {
@@ -992,11 +997,15 @@ svg path {
 
 .quotes-buttons-pagination {
   position: absolute;
-  top: 82%;
+  bottom: 10%;
   left: 26%;
   transition: 0.3s opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
+}
+
+.quotes__slider-block {
+  position: relative;
 }
 
 .faq__top {
@@ -1125,6 +1134,7 @@ svg path {
 .accordion__content.open {
   opacity: 1;
   padding: 0px 20px 30px;
+  max-height: var(--height, 0);
 }
 
 .faq__block-text {
@@ -1335,6 +1345,13 @@ input::placeholder {
   color: #bbbbbb;
 }
 
+.footer__menu {
+  display: flex;
+  padding-top: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer {
   padding: 93px 0px;
 }
@@ -1427,8 +1444,95 @@ input::placeholder {
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .header__nav {
+  .header__social-button {
     display: none;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__burger-icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    left: 85%;
+    top: 10%;
+    width: 30px;
+    height: 27px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px;
+  }
+  .header__burger-icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  .header__burger-icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .header__burger-icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+  .header__burger-icon span,
+.header__burger-icon::before,
+.header__burger-icon::after {
+    right: 0;
+    position: absolute;
+    height: 12%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #697CA6;
+    border-radius: 2px;
+  }
+  .header__burger-icon::before,
+.header__burger-icon::after {
+    content: "";
+  }
+  .header__burger-icon::before {
+    top: 0;
+  }
+  .header__burger-icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  .header__burger-icon::after {
+    bottom: 0;
+  }
+  .header__burger-menu {
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    top: 0;
+    display: block;
+    background: white;
+    position: fixed;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger-menu._active {
+    right: 0;
+  }
+  .header__list {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 280px;
+  }
+  .header__list-point {
+    padding: 0;
+    font-size: 30px;
+    line-height: 80px;
+  }
+  .header__social {
+    display: block;
+    text-align: center;
+  }
+  .header__social a:nth-child(4) {
+    padding-right: 0px;
+  }
+  .header__social-point img {
+    width: 60px;
+    height: 60px;
   }
   .brands-wrapper {
     padding-top: 27px;
@@ -1498,14 +1602,27 @@ input::placeholder {
     padding: 25px 25px 50px;
   }
   .quotes-buttons-pagination {
-    top: 92%;
-    left: 37%;
+    bottom: 5%;
+    left: 41%;
   }
   .faq__suptittle {
     padding-top: 60px;
   }
   .faq__line:last-child {
     padding-bottom: 60px;
+  }
+  .accordion__content {
+    display: block;
+  }
+  .accordion__content.open {
+    padding-left: 62px;
+  }
+  .faq__block-text {
+    padding-left: 0;
+  }
+  .accordion__control {
+    text-align: left;
+    background-color: white;
   }
   .news__wrapper {
     padding: 60px 0px 60px;
@@ -1520,6 +1637,9 @@ input::placeholder {
   .footer__copyright {
     padding: 30px 0px 30px;
     text-align: center;
+  }
+  .footer__menu {
+    display: none;
   }
 }
 /* Portrait phones and smaller */
@@ -1539,6 +1659,10 @@ input::placeholder {
   }
   .features__body-column-text {
     padding-bottom: 40px;
+  }
+  .quotes-buttons-pagination {
+    bottom: 5%;
+    left: 30%;
   }
   .news__input {
     margin-bottom: 20px;
@@ -1565,6 +1689,12 @@ input::placeholder {
   .plan__button.white {
     margin-top: 20px;
   }
+  .faq__block-text {
+    padding-right: 0px;
+  }
+  .accordion__content.open {
+    padding-left: 10px;
+  }
   .blog__text-buttons {
     text-align: center;
   }
@@ -1581,5 +1711,8 @@ input::placeholder {
   .quotes__slider-icon {
     bottom: -15%;
     left: 38%;
+  }
+  .features__body-column-text {
+    max-width: 250px;
   }
 }

@@ -108,9 +108,13 @@ svg path {
   padding: 0px 15px;
 }
 
+body._lock  {
+  overflow: hidden;
+}
+
 // HEADER
 
-.header__nav {
+.header__burger-menu {
   display: flex;
   padding-top: 12px;
   align-items: center;
@@ -156,7 +160,7 @@ svg path {
   padding-right: 40px;
   }
 
-}
+} 
 .header__social {
   img {
   vertical-align: middle;
@@ -182,6 +186,7 @@ transition: all .3s ease;
   color: #4781ff;
   background: #9db9f1;
 }
+
 
 // INTRO
 
@@ -773,6 +778,7 @@ padding-bottom: 183px;
     letter-spacing: 0.03em;
     color: #676F95;
     padding: 41px 71px 53px 69px;
+    position: relative;
   }
 
 
@@ -789,12 +795,17 @@ padding-bottom: 183px;
 
   .quotes-buttons-pagination{
     position: absolute;
-    top: 82%;
+    bottom: 10%;
     left: 26%;
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10;
   }
+
+  .quotes__slider-block {
+    position: relative;
+  }
+
 
 
   // FAQ
@@ -922,8 +933,9 @@ background-color: white;
   .accordion__content.open {
     opacity: 1;
     padding: 0px 20px 30px;
-    
+    max-height: var(--height, 0);
   }
+
 
   .faq__block-text {
     font-family: 'Roboto';
@@ -1119,6 +1131,13 @@ background-color: white;
   }
 
   // FOOTER
+  
+  .footer__menu {
+    display: flex;
+    padding-top: 12px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .footer{
     padding: 93px 0px;
@@ -1250,10 +1269,110 @@ background-color: white;
 @media (max-width: 767px) {
 
   // HEADER 
-  .header__nav{
+  .header__social-button{
+    display: none;
+  }
+  .header__logo{
     display: none;
   }
 
+  .header__burger-icon{
+    z-index: 5;
+    display: block;
+    position:  relative;
+    left: 85%;
+    top: 10%;
+    width: 30px;
+    height: 27px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .header__burger-icon._active span{
+    transform: scale(0) translate(0px, -50%)
+  }
+
+  .header__burger-icon._active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .header__burger-icon._active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+  
+  .header__burger-icon span,
+  .header__burger-icon::before,
+  .header__burger-icon::after{
+    right: 0;
+    position: absolute;
+    height: 12%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #697CA6;
+    border-radius: 2px;
+  }
+  .header__burger-icon::before,
+  .header__burger-icon::after{
+    content: '';
+  }
+  
+  .header__burger-icon::before{
+    top: 0;
+  }
+
+  .header__burger-icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%)
+  };
+
+  .header__burger-icon::after{
+    bottom: 0;
+  }
+
+
+.header__burger-menu{
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  right: -100%;
+  top: 0;
+  display: block;
+  background: white;
+  position: fixed;
+  transition: all 0.3s ease 0s;
+  }
+
+  .header__burger-menu._active{
+    right: 0;
+  }
+
+  .header__list{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 280px;
+  }
+  .header__list-point{
+    padding: 0;
+    font-size: 30px;
+    line-height: 80px;
+  }
+  .header__social{
+    display: block;
+    text-align: center;
+  }
+  .header__social a:nth-child(4){
+    padding-right: 0px;
+  }
+  
+  .header__social-point img{
+    width: 60px;
+    height: 60px;
+  }
+  
     // BRANDS
 
     .brands-wrapper {
@@ -1348,8 +1467,8 @@ background-color: white;
     }
 
     .quotes-buttons-pagination{
-      top: 92%;
-      left: 37%;
+      bottom: 5%;
+      left: 41%;
     }
 
     // FAQ 
@@ -1360,6 +1479,24 @@ background-color: white;
 
     .faq__line:last-child{
       padding-bottom: 60px;
+    }
+
+    .accordion__content {
+      display: block;
+    }
+
+    
+    .accordion__content.open{
+      padding-left: 62px;
+    }
+
+    .faq__block-text {
+      padding-left: 0;
+    }
+
+    .accordion__control{
+      text-align: left;
+      background-color: white;
     }
 
     // NEWS
@@ -1382,6 +1519,12 @@ background-color: white;
     .footer__copyright{
       padding: 30px 0px 30px ;
       text-align: center;
+    }
+
+    // FOOTER 
+
+    .footer__menu{
+      display: none;
     }
 }
 
@@ -1406,7 +1549,12 @@ background-color: white;
 .features__body-column-text{
   padding-bottom: 40px;
 }
+// QUOTES 
 
+.quotes-buttons-pagination{
+  bottom: 5%;
+  left: 30%;
+}
   //NEWS
 
   .news__input{
@@ -1447,6 +1595,17 @@ background-color: white;
     margin-top: 20px;
   }
 
+
+  // FAQ
+
+  .faq__block-text{
+    padding-right: 0px;
+  }
+
+  .accordion__content.open {
+    padding-left: 10px;
+}
+
   // BLOG 
   .blog__text-buttons{
     text-align: center;
@@ -1468,6 +1627,11 @@ background-color: white;
   .quotes__slider-icon{
     bottom: -15%;
     left: 38%;
+  }
+
+  // FUTURES
+  .features__body-column-text{
+    max-width: 250px;
   }
 
 }
