@@ -46,7 +46,7 @@ new Swiper('.quotes__slider-block', {
 );
 
 const accordions = document.querySelectorAll('.accordion');
-const accordionButtons = document.querySelectorAll(".accordion__tittle")
+const accordionButtons = document.querySelectorAll(".accordion__tittle");
 const accordionDataboxes = document.querySelectorAll(".accordion__content");
 
 accordions.forEach(n => {
@@ -79,7 +79,7 @@ accordions.forEach(n => {
 });
 
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
     anchor.addEventListener('click', function (event) {
@@ -90,21 +90,21 @@ for (let anchor of anchors) {
             block: 'start'
         })
     })
-}
+};
 
 const iconMenu = document.querySelector('.header__burger-icon');
 const menuBody = document.querySelector('.header__burger-menu');
 iconMenu.addEventListener('click', function (e) {
-    document.body.classList.toggle('_lock')
+    document.body.classList.toggle('_lock');
     iconMenu.classList.toggle('_active');
     menuBody.classList.toggle('_active');
-})
+});
 
 if (iconMenu.classList.contains('_active')) {
-    document.body.classList.remove('_lock')
+    document.body.classList.remove('_lock');
     iconMenu.classList.remove('._active');
     menuBody.classList.remove('._active');
-}
+};
 
 
 
