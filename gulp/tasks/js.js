@@ -8,12 +8,12 @@ export const js = () => {
                 title: "JS",
                 message: "Error: <%= error.message %>"
             })))
-            .pipe(webpack({
-                mode: app.isBuild ? "production" : "development",
-                output: {
-                    filename: 'app.min.js',
-                }
-            }))
-            .pipe(app.gulp.dest(app.path.build.js))
-            .pipe(app.plugins.browsersync.stream());
-    }
+        .pipe(webpack({
+            mode: app.isBuild ? "production" : "development",
+            output: {
+                filename: 'app.min.js',
+            }
+        }))
+        .pipe(app.gulp.dest(app.path.build.js))
+        .pipe(app.plugins.browsersync.stream());
+}
