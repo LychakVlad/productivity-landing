@@ -327,7 +327,7 @@ font-size: 13px;
 line-height: 16px;
 color: #ADB4D2;
 position: relative;
-transition: all .4s ease;
+transition: all .2s linear;
 }
 .blue {
   padding: 13px 37px 13px 25px;
@@ -1554,7 +1554,7 @@ background-color: white;
 }
 .features__body-column{
   padding: 0px;
-  max-width: 300px;
+  max-width: 275px;
 }
 .features__body-column-text{
   padding-bottom: 50px;
@@ -1565,6 +1565,7 @@ background-color: white;
   bottom: 5%;
   left: 30%;
 }
+
   //NEWS
 
   .news__input{
@@ -1572,6 +1573,21 @@ background-color: white;
   }
 
 }
+
+@media (max-width: 403px){
+      // BRANDS
+
+      .brands-wrapper {
+        svg:nth-child(3){
+          margin-left: 0px;
+        };
+        svg:last-child{
+          margin-left:0px;
+        }
+      }
+}
+  
+
 /* Iphone 5 */
 @media (max-width: 320px) {
 

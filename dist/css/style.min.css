@@ -381,7 +381,7 @@ body._lock {
   line-height: 16px;
   color: #ADB4D2;
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.2s linear;
 }
 
 .blue {
@@ -1531,7 +1531,7 @@ input::placeholder {
   }
   .features__body-column {
     padding: 0px;
-    max-width: 300px;
+    max-width: 275px;
   }
   .features__body-column-text {
     padding-bottom: 50px;
@@ -1542,6 +1542,14 @@ input::placeholder {
   }
   .news__input {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 403px) {
+  .brands-wrapper svg:nth-child(3) {
+    margin-left: 0px;
+  }
+  .brands-wrapper svg:last-child {
+    margin-left: 0px;
   }
 }
 /* Iphone 5 */
