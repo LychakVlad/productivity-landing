@@ -89,8 +89,14 @@ for (let anchor of anchors) {
             behavior: 'smooth',
             block: 'start'
         })
+        if (iconMenu.classList.contains('_active')) {
+            document.body.classList.remove('_lock');
+            iconMenu.classList.remove('_active');
+            menuBody.classList.remove('_active');
+        };
     })
 };
+
 
 const iconMenu = document.querySelector('.header__burger-icon');
 const menuBody = document.querySelector('.header__burger-menu');
@@ -100,11 +106,7 @@ iconMenu.addEventListener('click', function (e) {
     menuBody.classList.toggle('_active');
 });
 
-if (iconMenu.classList.contains('_active')) {
-    document.body.classList.remove('_lock');
-    iconMenu.classList.remove('._active');
-    menuBody.classList.remove('._active');
-};
+
 
 
 
