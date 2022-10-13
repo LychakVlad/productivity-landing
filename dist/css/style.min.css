@@ -1536,12 +1536,21 @@ input::placeholder {
   .features__body-column-text {
     padding-bottom: 50px;
   }
+  .accordion__content.open {
+    padding-left: 10px;
+  }
   .quotes-buttons-pagination {
     bottom: 5%;
     left: 30%;
   }
+  .faq__block-text {
+    padding-right: 0px;
+  }
   .news__input {
     margin-bottom: 20px;
+  }
+  .plan__button.white {
+    margin-top: 20px;
   }
 }
 @media (max-width: 403px) {
@@ -1552,6 +1561,10 @@ input::placeholder {
     margin-left: 0px;
   }
 }
+.faq__block-text {
+  padding-right: 0px;
+}
+
 /* Iphone 5 */
 @media (max-width: 320px) {
   .intro__play {

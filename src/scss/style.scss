@@ -1559,6 +1559,10 @@ background-color: white;
 .features__body-column-text{
   padding-bottom: 50px;
 }
+
+.accordion__content.open {
+  padding-left: 10px;
+}
 // QUOTES 
 
 .quotes-buttons-pagination{
@@ -1566,12 +1570,20 @@ background-color: white;
   left: 30%;
 }
 
+// FAQ 
+.faq__block-text {
+  padding-right: 0px;
+}
+
   //NEWS
 
   .news__input{
     margin-bottom: 20px;
   }
-
+  // PLAN 
+  .plan__button.white {
+    margin-top: 20px;
+}
 }
 
 @media (max-width: 403px){
@@ -1587,6 +1599,11 @@ background-color: white;
       }
 }
   
+// FAQ 
+.faq__block-text {
+  padding-right: 0px;
+}
+
 
 /* Iphone 5 */
 @media (max-width: 320px) {
