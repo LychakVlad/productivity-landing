@@ -191,8 +191,8 @@ transition: all .3s ease;
 // INTRO
 
 .intro {
-  background: url('/img/intro-back.png') center no-repeat;
-  background-size: cover;
+  background: url('../img/intro-back.svg') center no-repeat;
+  background-size: auto 100%;
   max-width: 100%;
   max-height: 100%;
 
@@ -369,7 +369,7 @@ transition: all .4s ease;
 
 
 .features {
-  background: url('../img/features.png') center no-repeat;
+  background: url('../img/features.svg') center no-repeat;
   background-size: cover;
   max-width: 1920px;
   max-height: 885px;
