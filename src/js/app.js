@@ -7,9 +7,9 @@ new Swiper('.blog-swiper', {
     speed: 700,
     slidesPerView: 1,
     centeredSlides: true,
-    /**autoplay: {
+    autoplay: {
         delay: 4000,
-    }, **/
+    },
     navigation: {
         nextEl: '.blog-swiper-button-next',
         prevEl: '.blog-swiper-button-prev',
@@ -26,9 +26,9 @@ new Swiper('.quotes__slider-block', {
     grabCursor: true,
     loop: true,
     watchSlideVisibility: true,
-    /** autoplay: {
+    autoplay: {
         delay: 2000,
-    }, **/
+    },
     speed: 700,
     pagination: {
         el: '.quotes-slider-pagination',

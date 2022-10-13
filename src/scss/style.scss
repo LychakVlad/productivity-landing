@@ -331,6 +331,7 @@ transition: all .4s ease;
 }
 .blue {
   padding: 13px 37px 13px 25px;
+  margin-right: 30px;
 }
 .white {
   padding: 13px 21px;
@@ -390,7 +391,7 @@ color: #3D4F9F;
 padding-bottom: 92px;
 }
 .features__body-column-img{
-  padding-bottom: 33px;
+  padding-bottom: 10px;
 }
 .features__body {
   display: flex;
@@ -411,16 +412,16 @@ padding-bottom: 92px;
   font-family: 'OpenSans_SemiCondensed';
 font-style: normal;
 font-weight: 700;
-font-size: 14px;
+font-size: 18px;
 line-height: 25px;
 color: #4074F8;
-padding-bottom: 25px;
+padding-bottom: 10px;
 }
 .features__body-column-text {
   font-family: 'OpenSans_SemiCondensed';
 font-style: normal;
 font-weight: 600;
-font-size: 11px;
+font-size: 14px;
 line-height: 19px;
 color: #ADB3CB;
 
@@ -831,8 +832,8 @@ padding: 176px 0px 20px;
   .faq__tittle {
     font-family: 'Quicksand';
 font-style: normal;
-font-weight: 500;
-font-size: 24px;
+font-weight: 600;
+font-size: 30px;
 line-height: 30px;
 color: #3D4F9F;
 padding-bottom: 70px;
@@ -852,9 +853,9 @@ padding-left: 30px;
 font-family: 'Quicksand';
 font-style: normal;
 font-weight: 500;
-font-size: 15px;
-line-height: 19px;
-letter-spacing: 0.03em;
+font-size: 20px;
+line-height: 20px;
+letter-spacing: 0.05em;
 color: #8E96B7;
 transition: all 0.2s ease-out;
 position: relative;
@@ -869,7 +870,7 @@ background-color: white;
     height: 3px;
     background-color: #8E96B7;
     position: absolute;
-    top: 8px;
+    top: 12px;
     border-radius: 2px;
     transition: all 0.2s ease-out;
   }
@@ -945,7 +946,7 @@ background-color: white;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.1em;
     color: #8D96BD;
@@ -1033,6 +1034,7 @@ background-color: white;
     box-shadow: 0px 5px 15px #6480E8;
     padding: 13px 17px;
     border-radius: 2px;
+    margin-right: 24px;
   }
   .start__button1:hover {
     color: #383e57;
@@ -1303,7 +1305,7 @@ background-color: white;
   }
 
   .header__burger-icon._active::after{
-    bottom: 50%;
+    bottom: 46.5%;
     transform: rotate(45deg) translate(0px, 50%);
   }
   
@@ -1357,7 +1359,7 @@ background-color: white;
     text-align: center;
     display: block;
     margin: 0 auto;
-    padding-bottom: 280px;
+    padding-bottom: 10em;
   }
   .header__list-point{
     padding: 0;
@@ -1373,8 +1375,8 @@ background-color: white;
   }
   
   .header__social-point img{
-    width: 60px;
-    height: 60px;
+    width: 28px;
+    height: 28px;
   }
   
     // BRANDS
@@ -1534,6 +1536,10 @@ background-color: white;
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+  // BLOG
+  .blog__text-button1{
+    margin-bottom: 20px;
+  }
 
   // FEATURES 
 
@@ -1551,7 +1557,7 @@ background-color: white;
   max-width: 300px;
 }
 .features__body-column-text{
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 // QUOTES 
 
@@ -1614,6 +1620,7 @@ background-color: white;
   .blog__text-buttons{
     text-align: center;
   }
+
 
   .blog__text-button2{
     margin-top: 20px;

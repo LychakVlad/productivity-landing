@@ -386,6 +386,7 @@ body._lock {
 
 .blue {
   padding: 13px 37px 13px 25px;
+  margin-right: 30px;
 }
 
 .white {
@@ -447,7 +448,7 @@ body._lock {
 }
 
 .features__body-column-img {
-  padding-bottom: 33px;
+  padding-bottom: 10px;
 }
 
 .features__body {
@@ -471,17 +472,17 @@ body._lock {
   font-family: "OpenSans_SemiCondensed";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 25px;
   color: #4074F8;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 
 .features__body-column-text {
   font-family: "OpenSans_SemiCondensed";
   font-style: normal;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 19px;
   color: #ADB3CB;
 }
@@ -898,8 +899,8 @@ body._lock {
 .faq__tittle {
   font-family: "Quicksand";
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 30px;
   line-height: 30px;
   color: #3D4F9F;
   padding-bottom: 70px;
@@ -920,9 +921,9 @@ body._lock {
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 19px;
-  letter-spacing: 0.03em;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
   color: #8E96B7;
   transition: all 0.2s ease-out;
   position: relative;
@@ -937,7 +938,7 @@ body._lock {
   height: 3px;
   background-color: #8E96B7;
   position: absolute;
-  top: 8px;
+  top: 12px;
   border-radius: 2px;
   transition: all 0.2s ease-out;
 }
@@ -1012,7 +1013,7 @@ body._lock {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.1em;
   color: #8D96BD;
@@ -1105,6 +1106,7 @@ body._lock {
   box-shadow: 0px 5px 15px #6480E8;
   padding: 13px 17px;
   border-radius: 2px;
+  margin-right: 24px;
 }
 
 .start__button1:hover {
@@ -1341,7 +1343,7 @@ input::placeholder {
     transform: rotate(-45deg) translate(0px, -50%);
   }
   .header__burger-icon._active::after {
-    bottom: 50%;
+    bottom: 46.5%;
     transform: rotate(45deg) translate(0px, 50%);
   }
   .header__burger-icon span,
@@ -1387,7 +1389,7 @@ input::placeholder {
     text-align: center;
     display: block;
     margin: 0 auto;
-    padding-bottom: 280px;
+    padding-bottom: 10em;
   }
   .header__list-point {
     padding: 0;
@@ -1402,8 +1404,8 @@ input::placeholder {
     padding-right: 0px;
   }
   .header__social-point img {
-    width: 60px;
-    height: 60px;
+    width: 28px;
+    height: 28px;
   }
   .brands-wrapper {
     padding-top: 27px;
@@ -1515,6 +1517,9 @@ input::placeholder {
 }
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+  .blog__text-button1 {
+    margin-bottom: 20px;
+  }
   .features__body {
     width: 100%;
     padding-bottom: 60px;
@@ -1529,7 +1534,7 @@ input::placeholder {
     max-width: 300px;
   }
   .features__body-column-text {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
   .quotes-buttons-pagination {
     bottom: 5%;
