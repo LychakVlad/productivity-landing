@@ -7,8 +7,8 @@ import { plugins } from "./gulp/config/plugins.js";
 
 // Передаем значения в глобальную переменную
 global.app = {
-    isBuild: process.argv.includes('--build'),
-    isDev: !process.argv.includes('--build'),
+    isBuild: process.argv.includes('--docs'),
+    isDev: !process.argv.includes('--docs'),
     path: path,
     gulp: gulp,
     plugins: plugins,
@@ -45,12 +45,12 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasks);
+const docs = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 
 // Экспорт сценариев
 export { dev }
-export { build }
+export { docs }
 export { deployZIP }
 
 // Выполнение сценария по умолчанию
